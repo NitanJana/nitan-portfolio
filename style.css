@@ -6,15 +6,22 @@
   --off-white: #e2e8f0;
 }
 
-html,
 body {
   font-family: "Montserrat", sans-serif;
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0rem auto;
+  max-width: 70%;
+
+  width: 100%;
 }
 
 hr {
   margin: 2rem 0rem;
+}
+
+/** spaces **/
+
+.margin-md {
+  margin: 2rem;
 }
 
 /* container */
@@ -24,24 +31,31 @@ hr {
 }
 
 .container-center {
-  max-width: 600px;
+  max-width: 900px;
+  width: 100%;
   margin: auto;
 }
 
 /*  links  */
-
 .link {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
 }
 
 .link-primary {
+  max-width: 140px;
+  border-radius: 2rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem auto;
   background-color: var(--primary-color);
   color: white;
 }
 
 .link-secondary {
+  max-width: 140px;
+  border-radius: 2rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem auto;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
@@ -71,6 +85,7 @@ hr {
 
 .navigation .nav-pills {
   text-align: right;
+  margin: 0.6rem 1rem;
 }
 
 .navigation .link {
@@ -84,12 +99,15 @@ hr {
 
 .hero {
   padding: 2rem;
+  padding-top: 5rem;
 }
 
 .hero .hero-img {
-  max-width: 350px;
+  max-width: 80%;
+  width: 350px;
   display: block;
   margin: auto;
+  padding-bottom: 2rem;
 }
 
 .hero .hero-heading {
@@ -104,11 +122,18 @@ hr {
 /* section */
 .section {
   padding: 2rem;
+  margin: 2rem 0rem;
   text-align: center;
+  border-radius: 1rem;
 }
 
 .section-offwhite {
   background-color: var(--off-white);
+}
+
+.section .section-content {
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .footer {
@@ -123,7 +148,7 @@ hr {
   font-weight: bold;
 }
 
-.footer .link {
+.footer .link-footer {
   color: white;
 }
 

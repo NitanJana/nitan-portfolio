@@ -155,3 +155,10 @@ hr {
 .footer ul {
   padding: 0rem;
 }
+
+.work-in-progress {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--primary-color);
+}

@@ -9,7 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0rem auto;
-  max-width: 50%;
+  max-width: 70%;
   width: 100%;
 }
 
@@ -30,6 +30,7 @@ hr {
 }
 
 .container-center {
+  /* text-align: center; */
   max-width: 900px;
   width: 100%;
   margin: auto;
@@ -45,7 +46,7 @@ hr {
   max-width: 140px;
   border-radius: 2rem;
   padding: 0.6rem 1.2rem;
-  margin: 1rem auto;
+  margin: 1rem;
   background-color: var(--primary-color);
   color: white;
 }
@@ -54,7 +55,7 @@ hr {
   max-width: 140px;
   border-radius: 2rem;
   padding: 0.6rem 1.2rem;
-  margin: 1rem auto;
+  margin: 1rem;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
@@ -65,6 +66,10 @@ hr {
   list-style-type: none;
 }
 
+.list-center {
+  margin: 0;
+  padding: 0;
+}
 .list-item-inline {
   display: inline;
   margin: 0rem 0.5rem;
@@ -177,7 +182,9 @@ hr {
     width: auto;
   }
 
-  .link-primary {
+  .projects .link {
     display: block;
+    width: 100%;
+    margin: 1rem auto;
   }
 }

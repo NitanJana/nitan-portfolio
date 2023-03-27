@@ -9,8 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0rem auto;
-  max-width: 70%;
-
+  max-width: 50%;
   width: 100%;
 }
 
@@ -161,4 +160,24 @@ hr {
   font-size: 40px;
   font-weight: bold;
   color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  body {
+    max-width: 95%;
+    width: 100%;
+  }
+
+  .list-item-inline {
+    display: inline;
+    padding: 0rem;
+  }
+
+  .container-center {
+    width: auto;
+  }
+
+  .link-primary {
+    display: block;
+  }
 }

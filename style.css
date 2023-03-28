@@ -9,7 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0rem auto;
-  max-width: 70%;
+  max-width: 60%;
   width: 100%;
 }
 
@@ -32,7 +32,7 @@ hr {
 .container-center {
   /* text-align: center; */
   max-width: 900px;
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
 
@@ -94,6 +94,11 @@ hr {
 
 .navigation .link {
   color: white;
+  border-radius: 1rem;
+}
+.navigation .link:hover {
+  color: var(--primary-color);
+  background-color: white;
 }
 .navigation .link-active {
   font-weight: bold;
@@ -154,6 +159,11 @@ hr {
 
 .footer .link-footer {
   color: white;
+  border-radius: 1rem;
+}
+.footer .link-footer:hover {
+  color: var(--primary-color);
+  background-color: white;
 }
 
 .footer ul {

@@ -3,6 +3,7 @@ import Link from "next/link";
 // components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import { Button } from "./ui/button";
 
 const Header = () => {
   return (
@@ -16,8 +17,14 @@ const Header = () => {
         </Link>
 
         {/* desktop nav */}
-        <div className="hidden xl:flex">
+        <div className="hidden xl:flex items-center gap-8">
           <Nav />
+          <Link href="/contact">
+            <div className="relative">
+              <div className="absolute inset-0.5 bg-accent rounded-full blur opacity-75"></div>
+              <Button className="relative">Hire me</Button>
+            </div>
+          </Link>
         </div>
 
         {/* mobile nav */}

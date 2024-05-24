@@ -37,7 +37,7 @@ const MobileNav = () => {
                 className={clsx(
                   currentPath === item.href &&
                     "text-accent border-b-2 border-accent",
-                  "hover:text-accent capitalize font-medium text-lg transition-all"
+                  "hover:text-accent capitalize font-medium text-lg transition-all p-1"
                 )}
               >
                 {item.name}

@@ -43,7 +43,7 @@ export default function Home() {
               <div className="mb-8 xl:mb-0 ">
                 <Social
                   containerStyles="flex gap-6"
-                  iconStyles="h-9 w-9 text-accent border border-accent rounded-full flex justify-center items-center text-base focus:bg-accent focus:text-primary hover:bg-accent hover:text-primary transition duration-500 ease-in-out"
+                  iconStyles="h-9 w-9 text-accent border border-accent rounded-full flex justify-center items-center text-base hover:bg-accent hover:text-primary transition duration-500 ease-in-out"
                 />
               </div>
             </div>

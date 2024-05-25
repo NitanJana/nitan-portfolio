@@ -2,6 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -27,8 +30,17 @@ const config = {
       colors: {
         primary: "#1b1e28",
         accent: {
-          DEFAULT: "#00ff99",
-          hover: "#00e187",
+          DEFAULT: "#10b981",
+          // #34d399->emerald-400
+          // #10b981->emerald-500
+          // #e11d48->rose-600
+          // #f43f5e->rose-500
+          // #14b8a6->teal-500
+          // #7c3aed->violet-600
+          // #6b21a8->purple-800
+          // #db2777->pink-600
+          hover: "#6ee7b7",
+          // #6ee7b7->emerald-300
         },
       },
       keyframes: {

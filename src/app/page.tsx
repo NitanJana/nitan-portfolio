@@ -1,9 +1,11 @@
-import Orbit from "@/components/Orbit";
-import ProfileImage from "@/components/ProfileImage";
-import Social from "@/components/Social";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
+
+// components
+// import ProfileImage from "@/components/ProfileImage";
+import Orbit from "@/components/Orbit";
+import Social from "@/components/Social";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (

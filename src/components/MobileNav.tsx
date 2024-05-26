@@ -1,12 +1,13 @@
 "use client";
 
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
-import { CiMenuFries } from "react-icons/ci";
-
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/constants";
+
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
+import { CiMenuFries } from "react-icons/ci";
+
 
 const MobileNav = () => {
   const currentPath = usePathname();

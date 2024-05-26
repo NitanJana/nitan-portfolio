@@ -1,3 +1,5 @@
+import Orbit from "@/components/Orbit";
+import ProfileImage from "@/components/ProfileImage";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -6,17 +8,17 @@ import { FiDownload } from "react-icons/fi";
 export default function Home() {
   return (
     <section className="h-full">
-      <div className="container h-full">
-        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24">
+      <div className="container h-full w-full">
+        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24 gap-8">
           {/* description */}
-          <div className="text-center xl:text-left">
+          <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-lg">Software Developer</span>
             <h1 className="h1 mt-2 mb-6">
               Hello I&apos;m <br />
               <span className="text-accent">Nitan Jana</span>
             </h1>
             <p className="max-w-[520px] mb-9 text-white/80">
-              I excel in creating fast, scalable, and user-friendly web
+              I excel in creating user-friendly, fast and scalable web
               applications, with proficiency in a wide range of programming
               languages and technologies.
             </p>
@@ -49,7 +51,9 @@ export default function Home() {
             </div>
           </div>
           {/* image */}
-          <div>photo</div>
+          <div className="order-1 xl:order-none w-1/2">
+            <Orbit />
+          </div>
         </div>
       </div>
     </section>

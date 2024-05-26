@@ -1,5 +1,7 @@
 const ContactPage = () => {
-  return <div>Contact Page</div>;
+  return (
+    <div className="flex justify-center items-center">Work in progress</div>
+  );
 };
 
 export default ContactPage;

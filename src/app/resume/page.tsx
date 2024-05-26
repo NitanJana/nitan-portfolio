@@ -1,5 +1,5 @@
 const ResumePage = () => {
-  return <div>Resume Page</div>;
+  return <div className="flex justify-center items-center">Work in progress</div>;
 };
 
 export default ResumePage;

@@ -1,5 +1,7 @@
 const ProjectsPage = () => {
-  return <div>Projects Page</div>;
+  return (
+    <div className="flex justify-center items-center">Work in progress</div>
+  );
 };
 
 export default ProjectsPage;

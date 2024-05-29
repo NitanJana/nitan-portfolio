@@ -5,12 +5,13 @@ import { FiDownload } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
     <section className="h-full">
       <div className="container h-full">
-        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24 gap-8">
+        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-20 gap-8">
           {/* description */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-lg">Software Developer</span>
@@ -57,6 +58,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* stats */}
+      <Stats />
     </section>
   );
 }

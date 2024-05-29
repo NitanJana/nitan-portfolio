@@ -2,15 +2,14 @@ import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
 // components
-// import ProfileImage from "@/components/ProfileImage";
-import Orbit from "@/components/Orbit";
-import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
+import Social from "@/components/Social";
+import Photo from "@/components/Photo";
 
 export default function Home() {
   return (
     <section className="h-full">
-      <div className="container h-full w-full">
+      <div className="container h-full">
         <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24 gap-8">
           {/* description */}
           <div className="text-center xl:text-left order-2 xl:order-none">
@@ -52,9 +51,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* image */}
-          <div className="order-1 xl:order-none w-1/2">
-            <Orbit />
+          {/* profile image */}
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+            <Photo />
           </div>
         </div>
       </div>

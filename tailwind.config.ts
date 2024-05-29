@@ -28,9 +28,10 @@ const config = {
     },
     extend: {
       colors: {
-        primary: "#1b1e28",
-        secondary: "#27272c",
-        accent: {
+        "primary": "#1b1e28",
+        "secondary": "#27272c",
+        "gray-light": "#232329",
+        "accent": {
           DEFAULT: "#10b981",
           // #34d399->emerald-400
           // #10b981->emerald-500

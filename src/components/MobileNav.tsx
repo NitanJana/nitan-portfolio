@@ -22,11 +22,9 @@ const MobileNav = () => {
         <div className="my-20 text-center text-2xl">
           <Link href="/">
             <div className="font-semibold flex gap-6 items-center justify-center">
-              <Link href="/">
                 <div className="text-3xl font-semibold flex gap-2">
                   <span className="text-accent">~/</span>Nitan
                 </div>
-              </Link>
             </div>
           </Link>
         </div>

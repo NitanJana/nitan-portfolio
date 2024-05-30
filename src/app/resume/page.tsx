@@ -112,6 +112,52 @@ const skills = {
   ],
 };
 
+const about = {
+  title: "About Me",
+  description:
+    "Hello, I'm Nitan Jana, a passionate developer, currently based at kolkata, and available for freelance projects.",
+  info: [
+    {
+      label: "Name",
+      value: "Nitan Jana",
+    },
+    {
+      label: "Age",
+      value: "25",
+    },
+    {
+      label: "Experience",
+      value: "3+ Years",
+    },
+
+    {
+      label: "Phone",
+      value: "(+91) 9735790228",
+    },
+
+    {
+      label: "Freelance",
+      value: "Available",
+    },
+    {
+      label: "Languages",
+      value: "English, Hindi",
+    },
+    {
+      label: "Nationality",
+      value: "Indian",
+    },
+    {
+      label: "Location",
+      value: "Kolkata, India",
+    },
+    {
+      label: "Email",
+      value: "NitanJanaOfficial@gmail.com",
+    },
+  ],
+};
+
 const ResumePage = () => {
   return (
     <motion.div
@@ -125,7 +171,7 @@ const ResumePage = () => {
           defaultValue="education"
           className="flex flex-col xl:flex-row gap-16"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[420px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
@@ -174,13 +220,13 @@ const ResumePage = () => {
                   </p>
                 </div>
 
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 xl:gap-8 ">
+                <ScrollArea className="h-[400px] max-w-[600px]mx-auto xl:mx-0">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 xl:gap-8 justify-items-center xl:justify-items-start">
                     {skills.items.map((skill) => (
                       <li key={skill.name}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-28 bg-gray-light rounded-lg flex justify-center items-center group">
+                            <TooltipTrigger className="aspect-square h-28 bg-gray-light rounded-lg flex justify-center items-center group">
                               <div className="text-6xl group-hover:text-accent traansition-all duration-300">
                                 {skill.icon}
                               </div>
@@ -198,8 +244,28 @@ const ResumePage = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="about" className="w-full">
-              about me
+            <TabsContent value="about" className="w-full h-full">
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-8 text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{about.title}</h3>
+                  <p className=" text-white/60 mx-auto xl:mx-0">
+                    {about.description}
+                  </p>
+                </div>
+                <ScrollArea className="h-[400px] mx-auto px-2">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-8 mx-auto lg:mx-6 xl:mx-0">
+                    {about.info.map((item) => (
+                      <li
+                        key={item.label}
+                        className="flex justify-start gap-6"
+                      >
+                        <span className="text-white/60">{item.label}</span>
+                        <span className="text-xl break-all xl:break-normal">{item.value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
           </div>
         </Tabs>

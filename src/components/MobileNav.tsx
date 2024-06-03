@@ -3,12 +3,11 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navItems } from '@/constants';
 
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from './ui/sheet';
 import { CiMenuFries } from 'react-icons/ci';
 
-const MobileNav = () => {
+const MobileNav = ({ items }: { items: { name: string; href: string }[] }) => {
   const currentPath = usePathname();
 
   return (
@@ -29,7 +28,7 @@ const MobileNav = () => {
         </div>
 
         <nav className='flex flex-col items-center justify-center gap-8'>
-          {navItems.map((item) => (
+          {items.map((item) => (
             <Link key={item.href} href={item.href}>
               <SheetClose
                 className={clsx(

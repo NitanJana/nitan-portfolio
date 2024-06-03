@@ -178,6 +178,7 @@ const ResumePage = () => {
           </TabsList>
 
           <div className='min-h-[70vh] w-full'>
+            {/* Education */}
             <TabsContent value='education' className='h-full w-full'>
               <div className='flex flex-col gap-8'>
                 <div className='flex flex-col gap-8 text-center xl:text-left'>
@@ -211,6 +212,7 @@ const ResumePage = () => {
               </div>
             </TabsContent>
 
+            {/* Skills */}
             <TabsContent value='skills' className='h-full w-full'>
               <div className='flex flex-col gap-8'>
                 <div className='flex flex-col gap-8 text-center xl:text-left'>
@@ -244,6 +246,7 @@ const ResumePage = () => {
               </div>
             </TabsContent>
 
+            {/* About me */}
             <TabsContent value='about' className='h-full w-full'>
               <div className='flex flex-col gap-8'>
                 <div className='flex flex-col gap-8 text-center xl:text-left'>

@@ -1,17 +1,19 @@
 'use client';
 
-import { PiCaretLeftBold, PiCaretRightBold } from 'react-icons/pi';
 import { useSwiper } from 'swiper/react';
+import { PiCaretLeftBold, PiCaretRightBold } from 'react-icons/pi';
+
+interface SliderIconsProps {
+  containerStyle: string;
+  btnStyle: string;
+  iconStyle?: string;
+}
 
 const SliderIcons = ({
   containerStyle,
   btnStyle,
   iconStyle,
-}: {
-  containerStyle: string;
-  btnStyle: string;
-  iconStyle?: string;
-}) => {
+}: SliderIconsProps) => {
   const swiper = useSwiper();
   return (
     <div className={containerStyle}>

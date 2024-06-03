@@ -5,6 +5,14 @@ import Nav from './Nav';
 import MobileNav from './MobileNav';
 import { Button } from './ui/button';
 
+// navigation items
+const navItems = [
+  { name: 'home', href: '/' },
+  { name: 'resume', href: '/resume' },
+  { name: 'projects', href: '/projects' },
+  { name: 'contact', href: '/contact' },
+];
+
 const Header = () => {
   return (
     <header className='py-8 text-white xl:py-10'>
@@ -18,7 +26,7 @@ const Header = () => {
 
         {/* desktop nav */}
         <div className='hidden items-center gap-8 xl:flex'>
-          <Nav />
+          <Nav items={navItems} />
           <Link href='/contact' tabIndex={-1}>
             <div className='group relative'>
               <div className='absolute inset-0.5 rounded-full bg-accent opacity-75 blur transition duration-500 ease-in-out group-hover:bg-accent-hover group-hover:blur-md'></div>
@@ -33,7 +41,7 @@ const Header = () => {
 
         {/* mobile nav */}
         <div className='xl:hidden'>
-          <MobileNav />
+          <MobileNav items={navItems} />
         </div>
       </div>
     </header>

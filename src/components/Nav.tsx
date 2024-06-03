@@ -3,14 +3,13 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navItems } from '@/constants';
 
-const Nav = () => {
+const Nav = ({ items }: { items: { name: string; href: string }[] }) => {
   const currentPath = usePathname();
 
   return (
     <nav className='flex gap-8'>
-      {navItems.map((item) => (
+      {items.map((item) => (
         <Link
           key={item.href}
           href={item.href}

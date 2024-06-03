@@ -4,22 +4,16 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import { Swiper as SwiperType } from 'swiper/types';
+import 'swiper/css';
 
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import Link from 'next/link';
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 import SliderIcons from '@/components/ui/SliderIcons';
 
 import Image from 'next/image';
+import ProjectLink from '@/components/ui/ProjectLink';
 
+// projects data
 const projects = [
   {
     index: '01',
@@ -27,10 +21,15 @@ const projects = [
     title: 'blog app',
     description:
       'A full-stack blogging application featuring user authentication & management and rich text editing.',
-    stack: [{ name: 'html' }, { name: 'css' }, { name: 'js' }],
-    image: '/images/projects/01.png',
-    live: '',
-    github: '',
+    stack: [
+      { name: 'React' },
+      { name: 'Tailwindcss' },
+      { name: 'Redux' },
+      { name: 'Appwrite' },
+    ],
+    image: '/images/projects/blog.png',
+    live: 'https://blog-appwrite-nitan.vercel.app/',
+    github: 'https://github.com/NitanJana/blog-appwrite',
   },
   {
     index: '02',
@@ -38,10 +37,10 @@ const projects = [
     title: 'weather wiz',
     description:
       'A weather web app with a user-friendly interface, live weather updates.',
-    stack: [{ name: 'html' }, { name: 'css' }, { name: 'js' }],
-    image: '/images/projects/02.png',
-    live: '',
-    github: '',
+    stack: [{ name: 'Html' }, { name: 'CSS' }, { name: 'JavaSccript' }],
+    image: '/images/projects/weather.png',
+    live: 'https://nitanjana.github.io/WeatherWiz/',
+    github: 'https://github.com/NitanJana/WeatherWiz',
   },
   {
     index: '03',
@@ -49,10 +48,15 @@ const projects = [
     title: 'message board',
     description:
       'A message board web app with a user-friendly interface and well-structured MVC backend for scalability.',
-    stack: [{ name: 'html' }, { name: 'css' }, { name: 'js' }],
-    image: '/images/projects/03.png',
-    live: '',
-    github: '',
+    stack: [
+      { name: 'React' },
+      { name: 'Tailwindcss' },
+      { name: 'Node.js' },
+      { name: 'MongoDB' },
+    ],
+    image: '/images/projects/message-board.png',
+    live: 'https://message-board-nitan.vercel.app/',
+    github: 'https://github.com/NitanJana/message-board',
   },
   {
     index: '04',
@@ -60,10 +64,10 @@ const projects = [
     title: 'todo vault',
     description:
       'A frontend web application for managing todo lists with prioritization and filtering.',
-    stack: [{ name: 'html' }, { name: 'css' }, { name: 'js' }],
-    image: '/images/projects/04.png',
-    live: '',
-    github: '',
+    stack: [{ name: 'Html' }, { name: 'CSS' }, { name: 'JavaSccript' }],
+    image: '/images/projects/todovault.png',
+    live: 'https://nitanjana.github.io/todoVault/',
+    github: 'https://github.com/NitanJana/todoVault',
   },
   {
     index: '05',
@@ -71,10 +75,10 @@ const projects = [
     title: 'pokemon cards',
     description:
       'A visually engaging Pokémon memory card game to promote cognitive skills in a fun way.',
-    stack: [{ name: 'html' }, { name: 'css' }, { name: 'js' }],
-    image: '/images/projects/05.png',
-    live: '',
-    github: '',
+    stack: [{ name: 'React' }, { name: 'Tailwindcss' }],
+    image: '/images/projects/pokemon.png',
+    live: 'https://pokemon-card-nitan.netlify.app/',
+    github: 'https://github.com/NitanJana/pokemon-memory-card',
   },
 ];
 
@@ -95,12 +99,16 @@ const ProjectsPage = () => {
     >
       <div className='container'>
         <div className='flex flex-col xl:flex-row xl:gap-8'>
-          <div className='order-2 flex w-full flex-col xl:order-none xl:h-[460px] xl:w-1/2 xl:justify-between'>
+          {/* project info */}
+          <div className='order-2 flex w-full flex-col xl:order-none xl:h-[400px] xl:w-1/2 xl:justify-between'>
             <div className='flex h-1/2 flex-col gap-6'>
               <div className='flex flex-col gap-3'>
+                {/* project index */}
                 <div className='text-outline text-8xl font-extrabold leading-none text-transparent'>
                   {project.index}
                 </div>
+
+                {/* project category */}
                 <div className='flex items-center gap-3'>
                   <div className='aspect-square h-[6px] rounded-full bg-accent'></div>
                   <p className='text-sm text-white/60'>
@@ -108,49 +116,37 @@ const ProjectsPage = () => {
                   </p>
                 </div>
               </div>
+
+              {/* project title and description */}
               <h2 className='text-[42px] font-bold capitalize leading-none text-white transition-all duration-500 group-hover:text-accent'>
                 {project.title}
               </h2>
               <p className='text-white/60'>{project.description}</p>
+
+              {/* project stack */}
               <ul className='flex gap-4'>
                 {project.stack.map((item, index) => (
-                  <li key={index} className='text-xl text-accent'>
+                  <li key={index} className='text-md text-accent'>
                     {item.name}
                     {index !== project.stack.length - 1 && ','}
                   </li>
                 ))}
               </ul>
 
-              <div className='border border-white/20'></div>
+              {/* project links */}
               <div className='flex items-center gap-4'>
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className='group flex aspect-square h-[50px] items-center justify-center rounded-full bg-white/5'>
-                        <BsArrowUpRight className='text-2xl text-white duration-500 group-hover:rotate-45 group-hover:text-accent' />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Preview</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className='group flex aspect-square h-[50px] items-center justify-center rounded-full bg-white/5'>
-                        <BsGithub className='text-2xl text-white group-hover:text-accent' />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                <ProjectLink href={project.live} tooltip='Live Preview'>
+                  <BsArrowUpRight className='text-2xl text-white duration-500 group-hover:rotate-45 group-hover:text-accent' />
+                </ProjectLink>
+
+                <ProjectLink href={project.github} tooltip='Github repository'>
+                  <BsGithub className='text-2xl text-white group-hover:text-accent' />
+                </ProjectLink>
               </div>
             </div>
           </div>
 
+          {/* project image */}
           <div className='w-full xl:w-1/2'>
             <Swiper
               spaceBetween={30}
@@ -160,7 +156,7 @@ const ProjectsPage = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className='w-full'>
-                  <div className='relative flex h-[360px] items-center justify-center bg-primary'>
+                  <div className='relative flex h-[400px] items-center justify-center bg-primary'>
                     <div className='absolute bottom-0 top-0 z-10 h-full w-full shadow'></div>
                     <div className='relative h-full w-full'>
                       <Image

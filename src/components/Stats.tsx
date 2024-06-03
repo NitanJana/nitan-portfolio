@@ -1,44 +1,46 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import CountUp from "react-countup";
+import clsx from 'clsx';
+import CountUp from 'react-countup';
 
 const Stats = () => {
   const stats = [
     {
-      name: "Years of experience",
+      name: 'Years of experience',
       value: 3,
     },
     {
-      name: "Techologies perfected",
+      name: 'Techologies perfected',
       value: 12,
     },
     {
-      name: "Projects completed",
+      name: 'Projects completed',
       value: 8,
     },
     {
-      name: "Codes committed",
+      name: 'Codes committed',
       value: 800,
     },
   ];
 
   return (
-    <section className="pt-4 pb-12 xl:py-0">
-      <div className="container">
-        <div className="flex gap-6 flex-wrap max-w-[90vw] xl:max-w-none mx-auto">
+    <section className='pb-12 pt-4 xl:py-0'>
+      <div className='container'>
+        <div className='mx-auto flex max-w-[90vw] flex-wrap gap-6 xl:max-w-none'>
           {stats.map((stat) => (
             <div
               key={stat.name}
-              className="flex flex-1 gap-4 items-center justify-center xl:justify-start"
+              className='flex flex-1 items-center justify-center gap-4 xl:justify-start'
             >
               <CountUp
                 end={stat.value}
                 duration={4}
                 delay={2}
-                className="text-4xl xl:text-6xl font-extrabold "
+                className='text-4xl font-extrabold xl:text-6xl'
               />
-              <p className="leading-snug max-w-[100px] text-white/80">{stat.name}</p>
+              <p className='max-w-[100px] leading-snug text-white/80'>
+                {stat.name}
+              </p>
             </div>
           ))}
         </div>

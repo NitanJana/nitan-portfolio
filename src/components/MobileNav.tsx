@@ -1,42 +1,41 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { navItems } from "@/constants";
+import clsx from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { navItems } from '@/constants';
 
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
-import { CiMenuFries } from "react-icons/ci";
-
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from './ui/sheet';
+import { CiMenuFries } from 'react-icons/ci';
 
 const MobileNav = () => {
   const currentPath = usePathname();
 
   return (
     <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent" />
+      <SheetTrigger className='flex items-center justify-center'>
+        <CiMenuFries className='text-[32px] text-accent' />
       </SheetTrigger>
 
-      <SheetContent className="flex flex-col">
-        <div className="my-20 text-center text-2xl">
-          <Link href="/">
-            <div className="font-semibold flex gap-6 items-center justify-center">
-                <div className="text-3xl font-semibold flex gap-2">
-                  <span className="text-accent">~/</span>Nitan
-                </div>
+      <SheetContent className='flex flex-col'>
+        <div className='my-20 text-center text-2xl'>
+          <Link href='/'>
+            <div className='flex items-center justify-center gap-6 font-semibold'>
+              <div className='flex gap-2 text-3xl font-semibold'>
+                <span className='text-accent'>~/</span>Nitan
+              </div>
             </div>
           </Link>
         </div>
 
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className='flex flex-col items-center justify-center gap-8'>
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
               <SheetClose
                 className={clsx(
                   currentPath === item.href &&
-                    "text-accent border-b-2 border-accent",
-                  "hover:text-accent capitalize font-medium text-lg transition-all p-1"
+                    'border-b-2 border-accent text-accent',
+                  'p-1 text-lg font-medium capitalize transition-all hover:text-accent'
                 )}
               >
                 {item.name}

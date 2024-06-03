@@ -1,6 +1,6 @@
 const ContactPage = () => {
   return (
-    <div className="flex justify-center items-center">Work in progress</div>
+    <div className='flex items-center justify-center'>Work in progress</div>
   );
 };
 

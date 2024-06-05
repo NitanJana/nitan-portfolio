@@ -26,4 +26,20 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
+
+  ::-webkit-scrollbar {
+    @apply w-1
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary my-1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-hover
+  }
 }

@@ -156,7 +156,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder='Any message for me?'
-                  className='h-28'
+                  className='h-32 resize-none'
                   {...field}
                 />
               </FormControl>

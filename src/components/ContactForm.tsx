@@ -3,6 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import axios from 'axios';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -14,20 +15,21 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from './ui/textarea';
+import { toast } from 'sonner';
 
-const formSchema = z.object({
-  firstname: z
+export const formSchema = z.object({
+  fullname: z
     .string()
     .min(3, {
-      message: 'First name must be at least 3 characters.',
+      message: 'Name must be at least 3 characters.',
     })
-    .max(30, { message: "First name can't be longer than 30 characters." }),
-  lastname: z
+    .max(30, { message: "Name can't be longer than 30 characters." }),
+  company: z
     .string()
     .min(3, {
-      message: 'Last name must be at least 3 characters.',
+      message: 'Company name must be at least 3 characters.',
     })
-    .max(30, { message: "Last name can't be longer than 30 characters." }),
+    .max(30, { message: "Company name can't be longer than 30 characters." }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
   phone: z
     .string()
@@ -47,8 +49,8 @@ export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      firstname: '',
-      lastname: '',
+      fullname: '',
+      company: '',
       email: '',
       phone: '',
       message: '',
@@ -57,7 +59,25 @@ export function ContactForm() {
 
   // submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const sendEmail = async () => {
+      try {
+        const response = await axios.post('/api/contact', values);
+
+        if (!response.data?.success) {
+          throw new Error('Could not send email');
+        }
+
+        return response.data;
+      } catch (error) {
+        throw error;
+      }
+    };
+
+    toast.promise(sendEmail, {
+      loading: 'Sending Email...',
+      success: (data) => data.message,
+      error: (error) => error.message,
+    });
   }
 
   return (
@@ -68,22 +88,22 @@ export function ContactForm() {
       >
         <h3 className='text-4xl text-accent'>Contact me</h3>
         <p className='text-white/60'>
-          Fill out the form below and I&apos;ll get back to you as soon as soon as
-          possible.
+          Fill out the form below and I&apos;ll get back to you as soon as soon
+          as possible.
         </p>
 
         {/* form inputs */}
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
           <FormField
             control={form.control}
-            name='firstname'
+            name='fullname'
             render={({ field }) => (
               <FormItem>
                 <FormControl>
                   <Input
-                    type='firstname'
-                    placeholder='First Name'
-                    autoComplete='given-name'
+                    type='text'
+                    placeholder='Name'
+                    autoComplete='name'
                     {...field}
                   />
                 </FormControl>
@@ -94,14 +114,14 @@ export function ContactForm() {
 
           <FormField
             control={form.control}
-            name='lastname'
+            name='company'
             render={({ field }) => (
               <FormItem>
                 <FormControl>
                   <Input
-                    type='lastname'
-                    placeholder='Last Name'
-                    autoComplete='family-name'
+                    type='text'
+                    placeholder='Company'
+                    autoComplete='organization'
                     {...field}
                   />
                 </FormControl>
@@ -135,7 +155,7 @@ export function ContactForm() {
               <FormItem>
                 <FormControl>
                   <Input
-                    type='phone'
+                    type='tel'
                     placeholder='Phone'
                     autoComplete='tel'
                     {...field}
@@ -175,4 +195,3 @@ export function ContactForm() {
     </Form>
   );
 }
-

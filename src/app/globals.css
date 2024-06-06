@@ -7,6 +7,7 @@
     @apply bg-primary font-primary leading-loose text-white selection:bg-rose-500;
   }
 
+  /* heading styles */
   .h1 {
     @apply text-[48px] font-semibold leading-[1.1] xl:text-[60px];
   }
@@ -19,6 +20,7 @@
     @apply text-[20px] font-semibold leading-[1.1] xl:text-[24px];
   }
 
+  /* text outline style for project index */
   .text-outline {
     -webkit-text-stroke: 1px white;
   }
@@ -27,6 +29,7 @@
     -webkit-text-stroke: 1px #00ff99;
   }
 
+  /* scrollbar style */
   ::-webkit-scrollbar {
     @apply w-1
   }
@@ -41,5 +44,17 @@
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-accent-hover
+  }
+
+  /* autofill style */
+  input:-webkit-autofill {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 30px #1b1e28 inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: white;
+  }
+
+  input:-webkit-autofill:focus {
+    @apply bg-primary;
   }
 }

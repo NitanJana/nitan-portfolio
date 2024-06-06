@@ -132,7 +132,7 @@ const about = {
 
     {
       label: 'Phone',
-      value: '(+91) 9735790228',
+      value: '(+91) 7908353382',
     },
 
     {

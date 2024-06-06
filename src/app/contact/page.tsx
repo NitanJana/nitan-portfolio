@@ -15,7 +15,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: 'Phone',
-    content: '(+91) 9735790228',
+    content: '(+91) 7908353382',
   },
   {
     icon: <FaMapMarkerAlt />,

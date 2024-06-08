@@ -157,7 +157,7 @@ const ProjectsPage = () => {
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className='w-full'>
                   <div className='relative flex h-[400px] items-center justify-center bg-primary'>
-                    <div className='absolute bottom-0 top-0 z-10 h-full w-full shadow'></div>
+                    <div className='absolute bottom-0 top-0 z-10 h-full w-full'></div>
                     <div className='relative h-full w-full'>
                       <Image
                         src={project.image}

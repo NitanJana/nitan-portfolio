@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-primary font-primary leading-loose text-white selection:bg-rose-500;
+    @apply bg-primary font-primary leading-loose text-white selection:bg-selection;
   }
 
   /* heading styles */

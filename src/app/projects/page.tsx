@@ -164,7 +164,7 @@ const ProjectsPage = () => {
                         alt={project.title}
                         fill
                         sizes='100%,100%'
-                        quality={100}
+                        quality={80}
                         priority={true}
                         className='object-contain'
                       />

@@ -14,7 +14,7 @@ interface ProjectLinkProps {
 
 const ProjectLink = ({ href, tooltip, children }: ProjectLinkProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} target='_blank' rel='noopener noreferrer' tabIndex={-1}>
       <TooltipProvider delayDuration={100}>
         <Tooltip>
           <TooltipTrigger className='group flex aspect-square h-[50px] items-center justify-center rounded-full bg-white/5'>

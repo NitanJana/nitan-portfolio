@@ -19,7 +19,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: 'easeInOut' },
           }}
-          className='absolute h-[298px] w-[298px] xl:h-[398px] xl:w-[398px]'
+          className='absolute h-[296px] w-[296px] xl:h-[394px] xl:w-[394px]'
         >
           <Image
             src='/images/photo.png'

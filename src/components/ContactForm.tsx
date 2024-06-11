@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -16,6 +17,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from './ui/textarea';
 import { toast } from 'sonner';
+import { RiLoader4Fill } from 'react-icons/ri';
 
 export const formSchema = z.object({
   fullname: z
@@ -59,6 +61,7 @@ export function ContactForm() {
 
   // submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
+    setSending(true);
     const sendEmail = async () => {
       try {
         const response = await axios.post('/api/contact', values);
@@ -70,6 +73,9 @@ export function ContactForm() {
         return response.data;
       } catch (error) {
         throw error;
+      } finally {
+        setSending(false);
+        form.reset();
       }
     };
 
@@ -79,6 +85,8 @@ export function ContactForm() {
       error: (error) => error.message,
     });
   }
+
+  const [sending, setSending] = useState(false);
 
   return (
     <Form {...form}>
@@ -187,8 +195,13 @@ export function ContactForm() {
 
         <div className='flex w-full items-center justify-center'>
           {/* submit button */}
-          <Button type='submit' variant='outline' className='max-w-40'>
-            Submit
+          <Button
+            type='submit'
+            variant='outline'
+            className='max-w-40 disabled:bg-accent disabled:text-black disabled:opacity-30'
+            disabled={sending}
+          >
+            {sending ? <RiLoader4Fill className='mr-2 animate-spin' /> : ''}Send
           </Button>
         </div>
       </form>

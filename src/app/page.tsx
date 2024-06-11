@@ -28,7 +28,7 @@ export default function Home() {
             <div className='flex flex-col items-center gap-8 xl:flex-row'>
               {/* cv button */}
               <Link
-                href='https://drive.google.com/file/d/1FmLQd452Le4BnpCp443cSUhAjFfPw0LD'
+                href='https://drive.google.com/file/d/1-ljf677LRU0g0hXSsgXwbW8DQck7ys1I/'
                 target='_blank'
                 rel='noopener noreferrer'
                 tabIndex={-1}

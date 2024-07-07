@@ -13,11 +13,6 @@ const info = [
     content: 'NitanJanaOfficial@gmail.com',
   },
   {
-    icon: <FaPhoneAlt />,
-    title: 'Phone',
-    content: '(+91) 7908353382',
-  },
-  {
     icon: <FaMapMarkerAlt />,
     title: 'Location',
     content: 'Kolkata, India',

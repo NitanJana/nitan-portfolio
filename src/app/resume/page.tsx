@@ -131,21 +131,12 @@ const about = {
     },
 
     {
-      label: 'Phone',
-      value: '(+91) 7908353382',
-    },
-
-    {
       label: 'Freelance',
       value: 'Available',
     },
     {
       label: 'Languages',
       value: 'English, Hindi',
-    },
-    {
-      label: 'Nationality',
-      value: 'Indian',
     },
     {
       label: 'Location',

@@ -1,6 +1,5 @@
 'use client';
 
-import clsx from 'clsx';
 import CountUp from 'react-countup';
 
 const Stats = () => {

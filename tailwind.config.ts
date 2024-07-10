@@ -37,6 +37,12 @@ const config = {
         },
         'gray-light': '#232329',
       },
+      animation: {
+        'spin-15': 'spin 15s linear infinite',
+        'spin-18': 'spin 18s linear infinite',
+        'spin-15-reverse': 'spin 15s linear infinite reverse',
+        'spin-18-reverse': 'spin 18s linear infinite reverse',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

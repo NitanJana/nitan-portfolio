@@ -9,7 +9,7 @@ import {
   Hr,
   Link,
 } from '@react-email/components';
-import { formSchema } from '../ContactForm';
+import { formSchema } from '@/components/contact/ContactForm';
 
 function ContactEmail({
   email,

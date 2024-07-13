@@ -4,7 +4,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from './tooltip';
+} from '@/components/ui/tooltip';
 
 interface ProjectLinkProps {
   href: string;

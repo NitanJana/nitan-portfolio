@@ -5,13 +5,15 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { getCalApi } from '@calcom/embed-react';
 
+// icons
 import { CiCalendar, CiMail } from 'react-icons/ci';
 import { FaLinkedin } from 'react-icons/fa';
 
 // components
 import { Button } from '@/components/ui/button';
-import Blob from '@/components/blob';
+import Blob from '@/components/contact/Blob';
 
+// blobs data
 const blobs = [
   {
     name: 'blob1',
@@ -80,6 +82,7 @@ export default function ContactPage() {
               href='mailto:nitanjanaofficial@gmail.com?&subject=Hello there,Nitan&body=Cool portfolio you have got there!'
               target='_blank'
               rel='noopener noreferrer'
+              tabIndex={-1}
             >
               <Button variant='outline' className='flex items-center gap-3'>
                 <CiMail className='h-5 w-5 stroke-1' />
@@ -91,6 +94,7 @@ export default function ContactPage() {
               href='https://www.linkedin.com/in/nitan-jana/'
               target='_blank'
               rel='noopener noreferrer'
+              tabIndex={-1}
             >
               <Button variant='outline' className='flex items-center gap-3'>
                 <FaLinkedin className='h-5 w-5 stroke-1' />

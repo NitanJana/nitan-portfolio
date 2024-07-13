@@ -2,16 +2,17 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
+// components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import 'swiper/css';
+import ProjectLink from '@/components/project/ProjectLink';
+import SliderIcons from '@/components/project/SliderIcons';
 
+// icons
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import SliderIcons from '@/components/ui/SliderIcons';
-
-import Image from 'next/image';
-import ProjectLink from '@/components/ui/ProjectLink';
 
 // projects data
 const projects = [

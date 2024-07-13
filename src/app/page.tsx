@@ -1,11 +1,13 @@
 import Link from 'next/link';
-import { FiDownload } from 'react-icons/fi';
 
 // components
 import { Button } from '@/components/ui/button';
-import Social from '@/components/Social';
-import Photo from '@/components/Photo';
-import Stats from '@/components/Stats';
+import Social from '@/components/home/Social';
+import Photo from '@/components/home/Photo';
+import Stats from '@/components/home/Stats';
+
+// icons
+import { FiDownload } from 'react-icons/fi';
 
 export default function Home() {
   return (

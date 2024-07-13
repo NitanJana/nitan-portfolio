@@ -1,8 +1,9 @@
 'use client';
 
-import { useAudio } from '@/context/AudioContext';
 import { FaPause, FaPlay } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
+
+import { useAudio } from '@/context/AudioContext';
 
 const AudioBtn = () => {
   const { isPlaying, toggleAudio } = useAudio();
@@ -30,7 +31,7 @@ const AudioBtn = () => {
             rotate: isPlaying ? [0, 360] : 0, // reset animation when paused
           }}
           transition={{
-            duration: isPlaying ? 20 : 1, // slow animation when playing,fast when pausing
+            duration: isPlaying ? 20 : 0.4, // slow animation when playing,fast when pausing
             ease: 'linear',
             repeat: isPlaying ? Infinity : 0, // no infinite loop animation when paused
           }}

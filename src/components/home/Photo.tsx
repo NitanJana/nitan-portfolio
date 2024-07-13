@@ -22,7 +22,7 @@ const Photo = () => {
           className='absolute h-[296px] w-[296px] xl:h-[394px] xl:w-[394px]'
         >
           <Image
-            src='/images/photo.png'
+            src='/images/home/photo.png'
             alt='profile photo'
             fill
             sizes='100%,100%'

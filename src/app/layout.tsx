@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-// components
 import { cn } from '@/lib/utils';
-import Header from '@/components/Header';
-import PageTransition from '@/components/ui/PageTransition';
-import StairTransition from '@/components/ui/StairTransition';
 import { AudioProvider } from '@/context/AudioContext';
-import AudioBtn from '@/components/audioBtn';
+
+// components
+import Header from '@/components/navigation/Header';
+import PageTransition from '@/components/PageTransition';
+import StairTransition from '@/components/StairTransition';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],

@@ -4,14 +4,10 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from './ui/sheet';
 import { CiMenuFries } from 'react-icons/ci';
-import AudioBtn from '@/components/audioBtn';
+
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import AudioBtn from '@/components/navigation/AudioBtn';
 
 const MobileNav = ({ items }: { items: { name: string; href: string }[] }) => {
   const currentPath = usePathname();
@@ -48,7 +44,7 @@ const MobileNav = ({ items }: { items: { name: string; href: string }[] }) => {
             </Link>
           ))}
         </nav>
-        <div className='flex absolute bottom-6 left-1/2 -translate-x-1/2 aspect-square items-center justify-center'>
+        <div className='absolute bottom-6 left-1/2 flex aspect-square -translate-x-1/2 items-center justify-center'>
           <AudioBtn />
         </div>
       </SheetContent>

@@ -27,7 +27,6 @@ import {
 } from 'react-icons/si';
 
 const education = {
-  // icon:,
   title: 'My Education',
   description:
     'I am a recent computer science graduate with a strong interest and skills in web development.',
@@ -56,7 +55,6 @@ const education = {
 };
 
 const skills = {
-  // icon: '',
   title: 'My Skills',
   description:
     'I am proficient in both frontend and backend technologies mentioned below and many more.',

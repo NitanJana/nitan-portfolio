@@ -38,12 +38,12 @@ const Header = () => {
               </Button>
             </div>
           </Link>
-
           <AudioBtn />
         </div>
 
         {/* mobile nav */}
-        <div className='xl:hidden'>
+        <div className='flex space-x-8 xl:hidden'>
+          <AudioBtn />
           <MobileNav items={navItems} />
         </div>
       </div>

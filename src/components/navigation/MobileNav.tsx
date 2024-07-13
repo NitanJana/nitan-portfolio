@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import { CiMenuFries } from 'react-icons/ci';
 
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import AudioBtn from '@/components/navigation/AudioBtn';
 
 const MobileNav = ({ items }: { items: { name: string; href: string }[] }) => {
   const currentPath = usePathname();
@@ -44,9 +43,6 @@ const MobileNav = ({ items }: { items: { name: string; href: string }[] }) => {
             </Link>
           ))}
         </nav>
-        <div className='absolute bottom-6 left-1/2 flex aspect-square -translate-x-1/2 items-center justify-center'>
-          <AudioBtn />
-        </div>
       </SheetContent>
     </Sheet>
   );
